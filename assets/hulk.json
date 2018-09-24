@@ -1,0 +1,10 @@
+{
+"model": "./assets/chara.obj",
+"shaderName": "simple",
+"texturePath": "texture_chara_UV2.png",
+"R": "0",
+"G": "0.651",
+"B": "0",
+"A": "1",
+"colors_mode": "1"
+}

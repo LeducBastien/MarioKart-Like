@@ -1,0 +1,65 @@
+matrice de base :
+
+1, 0, 0, 0
+0, 1, 0, 0
+0, 0, 1, 0
+0, 0, 0, 1
+
+matrice de translation :
+1, 0, 0, Tx
+0, 1, 0, Ty
+0, 0, 1, Tz
+0, 0, 0, 1
+
+matrice de scale :
+Sx, 0, 0, 0
+0, Sy, 0, 0
+0, 0, Sz, 0
+0, 0, 0, 0
+
+matrice de rotation Y :
+cos Ry, 0, sin Ry, 0
+0, 1, 0, 0
+-sin Ry, 0, cos Ry, 0
+0, 0, 0, 1
+
+matrice de rotation X ;
+1, 0, 0, 0
+0, cos Rx, -sin Rx, 0
+0, sin Rx, cos Rx, 0
+0, 0, 0, 1
+
+matrice de rotation Z :
+cos Rz, -sin Rz, 0, 0
+sin Rz, cos Rz, 0, 0
+0, 0, 1, 0
+0, 0, 0, 1
+
+matrice A :
+A00, A01, A02, A03
+A10, A11, A12, A13
+A20, A21, A22, A23
+A30, A31, A32, A33
+
+matrice B :
+B00, B01, B02, B03
+B10, B11, B12, B13
+B20, B21, B22, B23
+B30, B31, B32, B33
+
+matrice C = A + B :
+C12 = A10 * B02 + A11 * B12 + A12 * B22 + A13 * B32
+
+int a = 1;
+int b = 2;
+C[a][b] = 0;
+for( int i = 0; i < 3; ++i )
+{
+	C[a][b] += A[a][i] * B[i][b];
+}
+
+matrice de rotation inverse :
+X1, X2, X3, 0
+Y1, Y2, Y3, 0
+Z1, Z2, Z3, 0
+0, 0, 0, 1

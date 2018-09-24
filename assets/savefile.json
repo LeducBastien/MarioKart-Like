@@ -1,0 +1,10 @@
+{
+"model": "chara.obj",
+"shaderName": "simple",
+"texturePath": "texture_chara_UV2.png",
+"R": "0",
+"G": "0",
+"B": "0",
+"A": "1",
+"model_only":"true"
+}
